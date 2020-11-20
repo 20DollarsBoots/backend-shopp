@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="shopp" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>java:jboss/shoppingCart</jta-data-source>
+        <class>br.com.brn.shopp.model.AbstractEntityImpl</class>
+        <class>br.com.brn.shopp.model.OrderedItem</class>
+        <class>br.com.brn.shopp.model.User</class>
+        <class>br.com.brn.shopp.model.Product</class>
+        <class>br.com.brn.shopp.model.Category</class>
+        <class>br.com.brn.shopp.model.Order</class>
+    </persistence-unit>
+</persistence>
